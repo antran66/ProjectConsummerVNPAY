@@ -1,0 +1,11 @@
+2021-07-23 09:59:13,654             returnChannel:84   - [] - Could not return the resource to the pool - c.v.c.AMQPChannelPool  
+java.lang.IllegalStateException: Object has already been returned to this pool or is invalid
+	at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:551) ~[commons-pool2-2.4.2.jar:2.4.2]
+	at com.vnpay.connection.AMQPChannelPool.returnChannel(AMQPChannelPool.java:79) ~[restConsumer.jar:?]
+	at com.vnpay.service.ConsumerServiceImpl.lambda$receiveAndUpdateRequest$0(ConsumerServiceImpl.java:93) ~[restConsumer.jar:?]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:577) [amqp-client-5.9.0.jar:5.9.0]
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149) [amqp-client-5.9.0.jar:5.9.0]
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:104) [amqp-client-5.9.0.jar:5.9.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_291]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_291]

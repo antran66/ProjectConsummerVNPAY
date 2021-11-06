@@ -1,0 +1,5 @@
+com\vnpay\service\RPCClientTest.class
+com\vnpay\service\PublisherServiceImplTest.class
+com\vnpay\common\CommonTest.class
+com\vnpay\common\ConverterTest.class
+com\vnpay\common\ValidationTest.class
